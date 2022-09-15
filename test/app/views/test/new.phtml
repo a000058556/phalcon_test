@@ -1,6 +1,8 @@
-<h2>Sign up using this form</h2>
+<h1>新增資料</h1>
 
-<?php echo $this->tag->form("signup/register"); ?>
+<?php echo $this->flash->output() ?>
+
+<?php echo $this->tag->form("test/create") ?>
 
     <div class="form-group">
         <label for="name">Name</label>
@@ -18,5 +20,4 @@
 
 </form>
 
-<?php echo $this->tag->linkTo(['/', 'Go back', 'class' => 'btn btn-primary']); ?>
-
+<?php echo $this->tag->linkTo(['/test', 'Go back', 'class' => 'btn btn-primary']); ?>

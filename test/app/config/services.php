@@ -11,6 +11,7 @@ use Phalcon\Session\Adapter\Stream as SessionAdapter;
 use Phalcon\Session\Manager as SessionManager;
 use Phalcon\Url as UrlResolver;
 
+
 /**
  * Shared configuration service
  */
@@ -66,8 +67,8 @@ $di->setShared('view', function () {
 $di->setShared('db', function () {
     $config = $this->getConfig();
 
-    $class = 'Phalcon\Db\Adapter\Pdo\\' . $config->database->adapter;
-    $params = [
+    $class = 'Phalcon\Db\Adapter\Pdo\\' . $config->database->adapter; // 從config取得bd type
+    $params = [ // 取得db連線資訊
         'host'     => $config->database->host,
         'username' => $config->database->username,
         'password' => $config->database->password,
