@@ -21,7 +21,7 @@
                     <i class="fa fa-bars" style="color: #FFFF;"></i>
                 </a>
                 <!-- 搜尋欄 -->
-                <form class="ms-4 d-inline-flex" name="search_from"  onsubmit="return check_search_from()" method="post">
+                <form class="ms-4 d-inline-flex" name="search_from" action="api/cars"  onsubmit="return check_search_from()" method="post">
                     <label for="id">Name</label>
                         <?php echo $this->tag->textField(["id", 'class' => 'form-control', "placeholder" => 'Id']); ?>
                     <button class="btn my-2 my-sm-0 btn-light m-2"  type="submit">Search</button>
@@ -75,7 +75,7 @@
             }
             console.log(search_from.id.value)
             // serialize()會將表單值序列化
-            $.post('api/cars', function(data){
+            $.post('api/cars',$(search_from).serialize(), function(data){
                 console.log(data);
             });
         
