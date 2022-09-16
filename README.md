@@ -2,7 +2,7 @@
 ## PHP(7.4.30)、Phalcon(4.1.2)、Apache(2.4)
 
 
-## 網頁開發架構：
+## 網頁架構：
 
 ```
 test
@@ -30,9 +30,12 @@ test
     |   |__ IndexController.php
     |   |__ SignupController.php
     |   |__ TestController.php
+    |   |__ ApiController.php (建立api:取cars資料庫資料)
+    |   |__ StorkController.php (建立api:取外部資料)
     |
     |__ models
     |   |__ Users.php
+    |   |__ Cars.php
     |
     |__ library
     |__ migrations
@@ -42,13 +45,15 @@ test
         |   |__ index.phtml
         |
         |__ layouts
-        |   |__ index.phtml
         |
         |__ signup
         |   |__ index.phtml
+        |   |__ register.phtml
         |
         |__ test
         |   |__ index.phtml
+        |   |__ edit.phtml
+        |   |__ new.phtml
         |
         |__ index.phtml
 
