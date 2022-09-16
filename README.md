@@ -10,11 +10,6 @@ test
 |__ .htaccess
 |__ cache
 |__ public
-|   |__ css
-|   |__ files
-|   |__ img
-|   |__ js
-|   |__ temp
 |   |__ .htaccess
 |   |__ index.php
 |   
